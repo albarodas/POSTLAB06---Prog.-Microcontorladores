@@ -34,7 +34,7 @@ CONFIG FOSC=INTRC_NOCLKOUT //oscilador interno --> reloj interno..
     movwf   TMR0	; ALMACENAMOS UN VALOR INICIAL EN EL TMR0
     bcf	    INTCON, 2	; LIMPIAMOS BANDERA DEL OVERFLOW
     endm
- ;N=256-((1000ms)(500kHz)/4*256)
+ ;N=256-((2ms)(500kHz)/4*256)
  reset_tmr1 macro
     movlw   0x85	    ; INGRESAMOS VALOR DE 1s, '0x85EE' al TIMER1
     movwf   TMR1H
