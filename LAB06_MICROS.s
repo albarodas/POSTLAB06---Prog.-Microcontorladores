@@ -150,22 +150,22 @@ CONFIG FOSC=INTRC_NOCLKOUT //oscilador interno --> reloj interno..
     bsf	    PCLATH, 0	; PCLATH = 01	PCL = 02
     andlw   0x0f
     addwf   PCL		; PC = PCLATH + PCL + w
-    retlw   00111111B	; 0
-    retlw   00000110B	; 1
-    retlw   01011011B	; 2
-    retlw   01001111B	; 3
-    retlw   01100110B	; 4
-    retlw   01101101B	; 5
-    retlw   01111101B	; 6
-    retlw   00000111B	; 7
-    retlw   01111111B	; 8
-    retlw   01101111B	; 9
-    retlw   01110111B	; A
-    retlw   01111100B	; B
-    retlw   00111001B	; C
-    retlw   01011110B	; D
-    retlw   01111001B	; E
-    retlw   01110001B	; F
+    retlw   00111111B	; VALOR = 0
+    retlw   00000110B	; VALOR = 1
+    retlw   01011011B	; VALOR = 2
+    retlw   01001111B	; VALOR = 3
+    retlw   01100110B	; VALOR = 4
+    retlw   01101101B	; VALOR = 5
+    retlw   01111101B	; VALOR = 6
+    retlw   00000111B	; VALOR = 7
+    retlw   01111111B	; VALOR = 8
+    retlw   01101111B	; VALOR = 9
+    retlw   01110111B	; VALOR = A
+    retlw   01111100B	; VALOR = B
+    retlw   00111001B	; VALOR = C
+    retlw   01011110B	; VALOR = D
+    retlw   01111001B	; VALOR = E
+    retlw   01110001B	; VALOR = F
 
 ;-------------------------------CODIGO----------------------------------   
 ;-------------CONFIGURACION------------------
