@@ -189,7 +189,7 @@ CONFIG FOSC=INTRC_NOCLKOUT //oscilador interno --> reloj interno..
     movf	segundos, w	    ; PASO LO QUE ESTÉ EN 'SEGUNDOS' A 'W'
     movwf	dividendo
     dividir	10, cociente_display_0, residuo_display_1, dividendo	; HAGO LA DIVISION
-    call	prep_displays	    ; CONVIERTO UN NÚMERO A VALORES DE DENSIDAD
+    call	show_displays	    ; CONVIERTO UN NÚMERO A VALORES DE DENSIDAD
     
     movlw	60
     subwf	segundos, w
@@ -287,7 +287,7 @@ CONFIG FOSC=INTRC_NOCLKOUT //oscilador interno --> reloj interno..
     bcf		TMR2IF	    ; LIMPIO BANDERAS DE OVERFLOW DEL TIMER2
     return
  ;------------------------PREPARO LOS DISPLAYS---------------------------
- prep_displays:
+ show_displays:
     movf	cociente_display_0, w	    ; PASO EL CONCIENTE A 'W'
     call	values			    ; CONVIERTO EL VALOR YA EN 'W', A UN VALOR EN HEX POR MEDIO DE 'VALUES'
     movwf	show_display_0		    ; PASO 'W' EN HEX, A UN REGISTRO EN DONDE SE USARÁN LAS INTERRUPCIONES
